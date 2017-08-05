@@ -1,9 +1,9 @@
 0.8.7.5 changes
 =============
-- openssl-1.0.1k or older versions patched for CVE-2014-8275 broke compatibility with Bitcoin and Barter.
-  This update patches Barter to maintain compatibility with CVE-2014-8275 patched openssl.
-- If you are running v0.8.7.4 as distributed by barter.org you do not need to upgrade.
-  The binaries distributed on barter.org contain their own copy of openssl so they are unaffected by this issue.
+- openssl-1.0.1k or older versions patched for CVE-2014-8275 broke compatibility with Bitcoin and digitalBarter.
+  This update patches digitalBarter to maintain compatibility with CVE-2014-8275 patched openssl.
+- If you are running v0.8.7.4 as distributed by digitalbarter.org you do not need to upgrade.
+  The binaries distributed on digitalbarter.org contain their own copy of openssl so they are unaffected by this issue.
 
 0.8.7.4 changes
 =============

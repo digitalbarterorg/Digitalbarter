@@ -1,47 +1,79 @@
-Barter 0.8.x BETA
-====================
+Digital Barter integration/staging tree
+================================
 
-Copyright (c) 2009-2014 Bitcoin Developers
-Copyright (c) 2011-2014 Barter Developers
-
-Distributed under the MIT/X11 software license, see the accompanying
-file COPYING or http://www.opensource.org/licenses/mit-license.php.
-This product includes software developed by the OpenSSL Project for use in the [OpenSSL Toolkit](http://www.openssl.org/). This product includes
-cryptographic software written by Eric Young ([eay@cryptsoft.com](mailto:eay@cryptsoft.com)), and UPnP software written by Thomas Bernard.
+http://www.dititalbarter.org 
 
 
-Intro
----------------------
-Barter is a free open source peer-to-peer electronic cash system that is
-completely decentralized, without the need for a central server or trusted
-parties.  Users hold the crypto keys to their own money and transact directly
-with each other, with the help of a P2P network to check for double-spending.
+Copyright (c) 2009-2017 Bitcoin Developers
+Copyright (c) 2011-2017 Barter Developers
 
+ What is Digital Barter?
+----------------
 
-Setup
----------------------
-You need the Qt4 run-time libraries to run Barter-Qt. On Debian or Ubuntu:
-	`sudo apt-get install libqtgui4`
+Its a lite version of Bitcoin using scrypt as a proof-of-work algorithm.
+ -
 
-Unpack the files into a directory and run:
+Algorithm Scrypt 
+Type PoW 
+Coin name Barter 
+Coin abbreviation XAU 
+Address letter B 
+RPC port 20582 
+P2P port 20581 
+Block reward 70 coins 
+Block halving 400000 blocks 
+Total coin supply 62222222 coins 
+Coinbase maturity 6 blocks 
+Target spacing 10 minutes 
+Target timespan 20 minutes 
+Transaction confirmations 3 blocks 
 
-- bin/32/barter-qt (GUI, 32-bit)
-- bin/32/barterd (headless, 32-bit)
-- bin/64/barter-qt (GUI, 64-bit)
-- bin/64/barterd (headless, 64-bit)
+Digital 
 
-See the documentation at the [Barter Wiki](http://barter.info)
-for help and more information.
+Barter is released under the terms of the MIT license. See `COPYING` for more 
+information or see http://opensource.org/licenses/MIT.
 
+Development process
+-------------------
 
-Other Pages
----------------------
-- [Unix Build Notes](build-unix.md)
-- [OSX Build Notes](build-osx.md)
-- [Windows Build Notes](build-msw.md)
-- [Coding Guidelines](coding.md)
-- [Release Process](release-process.md)
-- [Release Notes](release-notes.md)
-- [Multiwallet Qt Development](multiwallet-qt.md)
-- [Unit Tests](unit-tests.md)
-- [Translation Process](translation_process.md)
+Developers work in their own trees, then submit pull requests when they think
+their feature or bug fix is ready.
+
+If it is a simple/trivial/non-controversial change, then one of the Barter
+development team members simply pulls it.
+
+If it is a *more complicated or potentially controversial* change, then the patch
+submitter will be asked to start a discussion with the devs and community.
+
+The patch will be accepted if there is broad consensus that it is a good thing.
+Developers should expect to rework and resubmit patches if the code doesn't 
+match the project's coding conventions (see `doc/coding.txt`) or are 
+controversial.
+
+The `master` branch is regularly built and tested, but is not guaranteed to be
+ completely stable. [Tags] are created
+ regularly to indicate new official, stable release versions of Digital Barter.
+
+Testing
+-------
+
+Testing and code review is the bottleneck for development; we get more pull
+ requests than we can review and test. Please be patient and help out, and
+ remember this is a security-critical project where any mistake might cost people
+lots of money.
+
+### Automated Testing
+
+ Developers are strongly encouraged to write unit tests for new code, and to
+submit new unit tests for old code.
+
+Unit tests for the core code are in `src/test/`. To compile and run them:
+
+    cd src; make -f makefile.unix test
+
+Unit tests for the GUI code are in `src/qt/test/`. To compile and run them:
+
+    qmake BITCOIN_QT_TEST=1 -o Makefile.test bitcoin-qt.pro
+    make -f Makefile.test
+    ./barter-qt_test
+

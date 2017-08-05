@@ -28,14 +28,9 @@ Target spacing 10 minutes
 Target timespan 20 minutes 
 Transaction confirmations 3 blocks 
 
+Digital 
 
-For more information, as well as an immediately useable, binary version of
-the Barter client sofware, see http://www.digitalbarter.org.
-
-License
--------Digital 
-
-Barter is released under the terms of the MIT license. See `COPYING` for more
+Barter is released under the terms of the MIT license. See `COPYING` for more 
 information or see http://opensource.org/licenses/MIT.
 
 Development process
@@ -51,25 +46,25 @@ If it is a *more complicated or potentially controversial* change, then the patc
 submitter will be asked to start a discussion with the devs and community.
 
 The patch will be accepted if there is broad consensus that it is a good thing.
-Developers should expect to rework and resubmit patches if the code doesn't
-match the project's coding conventions (see `doc/coding.txt`) or are
+Developers should expect to rework and resubmit patches if the code doesn't 
+match the project's coding conventions (see `doc/coding.txt`) or are 
 controversial.
 
 The `master` branch is regularly built and tested, but is not guaranteed to be
-completely stable. [Tags](https://github.com/barter-project/barter/tags) are created
-regularly to indicate new official, stable release versions of Barter.
+ completely stable. [Tags] are created
+ regularly to indicate new official, stable release versions of Digital Barter.
 
 Testing
 -------
 
 Testing and code review is the bottleneck for development; we get more pull
-requests than we can review and test. Please be patient and help out, and
-remember this is a security-critical project where any mistake might cost people
+ requests than we can review and test. Please be patient and help out, and
+ remember this is a security-critical project where any mistake might cost people
 lots of money.
 
 ### Automated Testing
 
-Developers are strongly encouraged to write unit tests for new code, and to
+ Developers are strongly encouraged to write unit tests for new code, and to
 submit new unit tests for old code.
 
 Unit tests for the core code are in `src/test/`. To compile and run them:
